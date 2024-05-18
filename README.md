@@ -12,3 +12,4 @@
 # readable stream, writable stream, duplex => read+write, transform stream => Output will be base on input
 
 # Day-5: Serving HTML files in node using express
+# Day-6: Middlewares-> app.use() and serving static files and bootsrap
