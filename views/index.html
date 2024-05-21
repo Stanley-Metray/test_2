@@ -9,13 +9,22 @@
 </head>
 <body>
     <h1 class="bg-primary text-white">Navigation From Here</h1>
-    <nav >
+    <nav>
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/contact">Contact</a></li>
         </ul>
     </nav>
+    <main>
+        <form action="/user" method="post" class="d-flex flex-column gap-2 w-50 me-auto ms-auto p-2">
+            <input type="text" name="firstName" id="firstName" placeholder="First Name" class="form-control"/>
+            <input type="text" name="lastName" id="lastName" placeholder="Last Name" class="form-control"/>
+            <input type="text" name="email" id="email" placeholder="Email" class="form-control"/>
+            <input type="text" name="password" id="password" placeholder="Password" class="form-control"/>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </main>
     <script src="/script/script.js"></script>
 </body>
 </html>
