@@ -14,3 +14,4 @@
 # Day-5: Serving HTML files in node using express
 # Day-6: Middlewares-> app.use() and serving static files and bootsrap
 # Day-7: Getting data from client side -> using middleware body-parser, handli post, get and delete request
+# Day-8: Accessing cookies in node application using cookie-parser middleware
