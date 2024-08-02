@@ -4,4 +4,4 @@ process.on('message', (message)=>{
     console.log(message);
 });
 
-process.send("This message is from Child Process");
+process.send('Message From Child Process');
