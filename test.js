@@ -1,57 +1,39 @@
 console.clear();
-function merge(nums1, m, nums2, n) {
 
-    let k = m+n-1;
-    let j = n-1;
-    let i = m-1;
-
-    while(i>=0 && j>=0)
+function removeElement(nums, val) {
+    let k = 0;
+    
+    for(let i=0; i<nums.length; i++)
     {
-        if(nums1[i]>=nums2[j])
-        {
-            nums1[k] = nums1[i];
-            i--; k--;
-        }
-        else
-        {
-            nums1[k] = nums2[j];
-            j--; k--;
-        }
+        if(nums[i]!==val)
+            nums[k++] = nums[i];
     }
-
-    if(j>=0)
-    {
-        while(j>=0)
-        {
-            nums1[k--] = nums2[j--];
-        }
-    }
-   
-
-    return nums1;
+    
+    return k;
 }
 
+
 // Test Case 1
-let nums1 = [1, 2, 3, 0, 0, 0];
-let nums2 = [2, 5, 6];
-let m = 3;
-let n = 3;
-merge(nums1, m, nums2, n);
-console.log(nums1);  // Expected Output: [1, 2, 2, 3, 5, 6]
+let nums = [3, 2, 2, 3];
+let val = 3;
+let k = removeElement(nums, val);
+console.log(nums.slice(0, k));  // Expected Output: [2, 2]
 
 // Test Case 2
-nums1 = [1];
-nums2 = [];
-m = 1;
-n = 0;
-merge(nums1, m, nums2, n);
-console.log(nums1);  // Expected Output: [1]
+nums = [0, 1, 2, 2, 3, 0, 4, 2];
+val = 2;
+k = removeElement(nums, val);
+console.log(nums.slice(0, k));  // Expected Output: [0, 1, 3, 0, 4]
 
 // Test Case 3
-nums1 = [0];
-nums2 = [1];
-m = 0;
-n = 1;
-merge(nums1, m, nums2, n);
-console.log(nums1);  // Expected Output: [1]
+nums = [1, 1, 1, 1];
+val = 1;
+k = removeElement(nums, val);
+console.log(nums.slice(0, k));  // Expected Output: []
+
+// Test Case 4
+nums = [4, 5, 6];
+val = 7;
+k = removeElement(nums, val);
+console.log(nums.slice(0, k));  // Expected Output: [4, 5, 6]
 
